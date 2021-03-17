@@ -22,6 +22,7 @@ from myapp.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home,name='home'),
+    path('s/<int:a>',goto_url,name='goto-url'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
